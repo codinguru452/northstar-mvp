@@ -1,0 +1,871 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description"content="Create your Northstar account.">
+    <meta name="keywords"content="Northstar, register, create account, furniture">
+    <title>Create Account | Northstar</title>
+    <link rel="shortcut icon" href="favicon.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+
+        /* =========================================
+           REGISTER SECTION
+        ========================================= */
+
+        .register-section {
+            min-height: 75vh;
+            display: flex;
+            align-items: center;
+            padding: 70px 0;
+            background: #eff2f1;
+        }
+
+        .register-wrapper {
+            max-width: 520px;
+            margin: 0 auto;
+        }
+
+        .register-card {
+            background: #ffffff;
+            padding: 42px;
+            border-radius: 10px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .register-header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .register-header h1 {
+            font-size: 32px;
+            font-weight: 600;
+            color: #2f2f2f;
+            margin-bottom: 10px;
+        }
+
+        .register-header p {
+            color: #6c757d;
+            margin-bottom: 0;
+        }
+
+        .register-form .form-label {
+            font-weight: 500;
+            color: #2f2f2f;
+            margin-bottom: 8px;
+        }
+
+        .register-form .form-control {
+            height: 50px;
+            border-radius: 5px;
+            border: 1px solid #d6d6d6;
+            padding: 0 15px;
+        }
+
+        .register-form .form-control:focus {
+            border-color: #3b5d50;
+            box-shadow: 0 0 0 0.15rem rgba(59, 93, 80, 0.15);
+        }
+
+        /* Password */
+
+        .password-container {
+            position: relative;
+        }
+
+        .password-container .form-control {
+            padding-right: 50px;
+        }
+
+        .password-toggle {
+            position: absolute;
+            right: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            border: none;
+            background: transparent;
+            color: #777;
+            cursor: pointer;
+        }
+
+        .password-toggle:hover {
+            color: #3b5d50;
+        }
+
+        /* Password strength */
+
+        .password-strength {
+            height: 4px;
+            width: 100%;
+            background: #e9eceb;
+            border-radius: 10px;
+            margin-top: 8px;
+            overflow: hidden;
+        }
+
+        .password-strength-bar {
+            height: 100%;
+            width: 0%;
+            transition: all 0.3s ease;
+        }
+
+        .password-hint {
+            font-size: 12px;
+            color: #777;
+            margin-top: 7px;
+        }
+
+        /* Terms */
+
+        .terms {
+            font-size: 13px;
+            color: #666;
+            margin: 20px 0;
+        }
+
+        .terms input {
+            accent-color: #3b5d50;
+        }
+
+        .terms a {
+            color: #3b5d50;
+            text-decoration: none;
+        }
+
+        .terms a:hover {
+            text-decoration: underline;
+        }
+
+        /* Register button */
+
+        .register-button {
+            width: 100%;
+            height: 52px;
+            border: none;
+            border-radius: 5px;
+            background: #3b5d50;
+            color: #ffffff;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .register-button:hover {
+            background: #314e43;
+            color: #ffffff;
+        }
+
+        /* Login link */
+
+        .login-link {
+            text-align: center;
+            margin-top: 25px;
+            color: #6c757d;
+            font-size: 15px;
+        }
+
+        .login-link a {
+            color: #3b5d50;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+
+        /* Back home */
+
+        .back-home {
+            text-align: center;
+            margin-top: 22px;
+        }
+
+        .back-home a {
+            color: #6c757d;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .back-home a:hover {
+            color: #3b5d50;
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 575px) {
+
+            .register-section {
+                padding: 45px 15px;
+            }
+
+            .register-card {
+                padding: 30px 22px;
+            }
+
+            .register-header h1 {
+                font-size: 27px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     NAVIGATION
+========================================= -->
+
+<nav class="custom-navbar navbar navbar-expand-md navbar-dark bg-dark"
+     aria-label="Northstar navigation bar">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="index.html">
+            Northstar<span>.</span>
+        </a>
+
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarsNorthstar"
+            aria-controls="navbarsNorthstar"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div class="collapse navbar-collapse"
+             id="navbarsNorthstar">
+
+
+            <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+
+                <li>
+                    <a class="nav-link" href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a class="nav-link" href="shop.html">
+                        Shop
+                    </a>
+                </li>
+
+                <li>
+                    <a class="nav-link" href="about.html">
+                        About us
+                    </a>
+                </li>
+
+                <li>
+                    <a class="nav-link" href="services.html">
+                        Services
+                    </a>
+                </li>
+
+                <li>
+                    <a class="nav-link" href="blog.html">
+                        Blog
+                    </a>
+                </li>
+
+                <li>
+                    <a class="nav-link" href="contact.html">
+                        Contact us
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+
+                <li>
+                    <a
+                        class="nav-link"
+                        href="login.html"
+                        aria-label="Login">
+
+                        <img
+                            src="images/user.svg"
+                            alt="Login">
+
+                    </a>
+                </li>
+
+
+                <li>
+                    <a
+                        class="nav-link"
+                        href="cart.html"
+                        aria-label="Shopping cart">
+
+                        <img
+                            src="images/cart.svg"
+                            alt="Cart">
+
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- =========================================
+     REGISTER SECTION
+========================================= -->
+
+<section class="register-section">
+
+    <div class="container">
+
+        <div class="register-wrapper">
+
+            <div class="register-card">
+
+
+                <!-- HEADER -->
+
+                <div class="register-header">
+
+                    <h1>
+                        Create Your Account
+                    </h1>
+
+                    <p>
+                        Join Northstar and start shopping.
+                    </p>
+
+                </div>
+
+
+                <!-- FORM -->
+
+                <form
+                    class="register-form"
+                    action="#"
+                    method="POST">
+
+
+                    <!-- FULL NAME -->
+
+                    <div class="mb-3">
+
+                        <label
+                            for="fullName"
+                            class="form-label">
+
+                            Full Name
+
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="fullName"
+                            name="full_name"
+                            placeholder="Enter your full name"
+                            autocomplete="name"
+                            required>
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+
+                    <div class="mb-3">
+
+                        <label
+                            for="email"
+                            class="form-label">
+
+                            Email Address
+
+                        </label>
+
+                        <input
+                            type="email"
+                            class="form-control"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email address"
+                            autocomplete="email"
+                            required>
+
+                    </div>
+
+
+                    <!-- PHONE -->
+
+                    <div class="mb-3">
+
+                        <label
+                            for="phone"
+                            class="form-label">
+
+                            Phone Number
+
+                        </label>
+
+                        <input
+                            type="tel"
+                            class="form-control"
+                            id="phone"
+                            name="phone"
+                            placeholder="Enter your phone number"
+                            autocomplete="tel"
+                            required>
+
+                    </div>
+
+
+                    <!-- PASSWORD -->
+
+                    <div class="mb-3">
+
+                        <label
+                            for="password"
+                            class="form-label">
+
+                            Password
+
+                        </label>
+
+
+                        <div class="password-container">
+
+                            <input
+                                type="password"
+                                class="form-control"
+                                id="password"
+                                name="password"
+                                placeholder="Create a password"
+                                autocomplete="new-password"
+                                minlength="8"
+                                required>
+
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                id="togglePassword"
+                                aria-label="Show password">
+
+                                <i class="fa-solid fa-eye"></i>
+
+                            </button>
+
+                        </div>
+
+
+                        <div class="password-strength">
+
+                            <div
+                                class="password-strength-bar"
+                                id="passwordStrength">
+                            </div>
+
+                        </div>
+
+
+                        <p class="password-hint">
+                            Use at least 8 characters.
+                        </p>
+
+                    </div>
+
+
+                    <!-- CONFIRM PASSWORD -->
+
+                    <div class="mb-3">
+
+                        <label
+                            for="confirmPassword"
+                            class="form-label">
+
+                            Confirm Password
+
+                        </label>
+
+
+                        <div class="password-container">
+
+                            <input
+                                type="password"
+                                class="form-control"
+                                id="confirmPassword"
+                                name="confirm_password"
+                                placeholder="Confirm your password"
+                                autocomplete="new-password"
+                                required>
+
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                id="toggleConfirmPassword"
+                                aria-label="Show password">
+
+                                <i class="fa-solid fa-eye"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- TERMS -->
+
+                    <div class="terms">
+
+                        <label>
+
+                            <input
+                                type="checkbox"
+                                id="terms"
+                                name="terms"
+                                required>
+
+                            I agree to the
+                            <a href="#">
+                                Terms &amp; Conditions
+                            </a>
+
+                            and
+
+                            <a href="#">
+                                Privacy Policy
+                            </a>.
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- REGISTER -->
+
+                    <button
+                        type="submit"
+                        class="register-button">
+
+                        Create Account
+
+                    </button>
+
+
+                </form>
+
+
+                <!-- LOGIN -->
+
+                <div class="login-link">
+
+                    Already have an account?
+
+                    <a href="login.html">
+                        Sign in
+                    </a>
+
+                </div>
+
+
+                <!-- BACK -->
+
+                <div class="back-home">
+
+                    <a href="index.html">
+
+                        <i class="fa-solid fa-arrow-left me-1"></i>
+
+                        Back to Home
+
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer class="footer-section">
+
+    <div class="container">
+
+        <div class="border-top copyright">
+
+            <div class="row pt-4">
+
+                <div class="col-lg-6">
+
+                    <p class="mb-2 text-center text-lg-start">
+
+                        Copyright &copy;
+
+                        <script>
+                            document.write(
+                                new Date().getFullYear()
+                            );
+                        </script>
+
+                        Northstar.
+                        All Rights Reserved.
+
+                    </p>
+
+                </div>
+
+
+                <div class="col-lg-6 text-center text-lg-end">
+
+                    <ul class="list-unstyled d-inline-flex ms-auto">
+
+                        <li class="me-4">
+                            <a href="#">
+                                Terms &amp; Conditions
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Privacy Policy
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================
+     JAVASCRIPT
+========================================= -->
+
+<script src="js/bootstrap.bundle.min.js"></script>
+
+
+<script>
+
+    /* =====================================
+       PASSWORD VISIBILITY
+    ===================================== */
+
+    function setupPasswordToggle(
+        buttonId,
+        inputId
+    ) {
+
+        const button =
+            document.getElementById(buttonId);
+
+        const input =
+            document.getElementById(inputId);
+
+
+        button.addEventListener(
+            "click",
+            function () {
+
+                const isPassword =
+                    input.type === "password";
+
+                input.type =
+                    isPassword
+                        ? "text"
+                        : "password";
+
+
+                const icon =
+                    button.querySelector("i");
+
+
+                icon.classList.toggle(
+                    "fa-eye",
+                    !isPassword
+                );
+
+                icon.classList.toggle(
+                    "fa-eye-slash",
+                    isPassword
+                );
+
+            }
+        );
+
+    }
+
+
+    setupPasswordToggle(
+        "togglePassword",
+        "password"
+    );
+
+
+    setupPasswordToggle(
+        "toggleConfirmPassword",
+        "confirmPassword"
+    );
+
+
+    /* =====================================
+       PASSWORD STRENGTH
+    ===================================== */
+
+    const password =
+        document.getElementById("password");
+
+    const strengthBar =
+        document.getElementById("passwordStrength");
+
+
+    password.addEventListener(
+        "input",
+        function () {
+
+            const value =
+                password.value;
+
+            let strength = 0;
+
+
+            if (value.length >= 8)
+                strength++;
+
+
+            if (/[A-Z]/.test(value))
+                strength++;
+
+
+            if (/[0-9]/.test(value))
+                strength++;
+
+
+            if (/[^A-Za-z0-9]/.test(value))
+                strength++;
+
+
+            if (strength === 0) {
+
+                strengthBar.style.width =
+                    "0%";
+
+            }
+            else if (strength === 1) {
+
+                strengthBar.style.width =
+                    "25%";
+
+            }
+            else if (strength === 2) {
+
+                strengthBar.style.width =
+                    "50%";
+
+            }
+            else if (strength === 3) {
+
+                strengthBar.style.width =
+                    "75%";
+
+            }
+            else {
+
+                strengthBar.style.width =
+                    "100%";
+
+            }
+
+        }
+    );
+
+
+    /* =====================================
+       PASSWORD MATCH VALIDATION
+    ===================================== */
+
+    const registerForm =
+        document.querySelector(".register-form");
+
+    const confirmPassword =
+        document.getElementById("confirmPassword");
+
+
+    registerForm.addEventListener(
+        "submit",
+        function (event) {
+
+            if (
+                password.value !==
+                confirmPassword.value
+            ) {
+
+                event.preventDefault();
+
+                alert(
+                    "Passwords do not match."
+                );
+
+                confirmPassword.focus();
+
+            }
+
+        }
+    );
+
+</script>
+
+
+</body>
+
+</html>
