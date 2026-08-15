@@ -218,7 +218,7 @@
       aria-label="Northstar navigation bar"
     >
       <div class="container">
-        <a class="navbar-brand" href="index.html"> Northstar<span>.</span> </a>
+        <a class="navbar-brand" href="index.html"> Northstar<span>Co.</span> </a>
 
         <button
           class="navbar-toggler"
@@ -284,70 +284,66 @@
 
             <!-- FORM -->
 
-            <form class="login-form" action="#" method="POST">
-              <!-- EMAIL -->
+            <!-- FORM -->
+<form id="loginForm" class="login-form" action="#" method="POST">
 
-              <div class="mb-4">
-                <label for="email" class="form-label"> Email Address </label>
+    <!-- EMAIL -->
+    <div class="mb-4">
+        <label for="email" class="form-label">Email Address</label>
 
-                <input
-                  type="email"
-                  class="form-control"
-                  id="email"
-                  name="email"
-                  placeholder="Enter your email address"
-                  autocomplete="email"
-                  required
-                />
-              </div>
+        <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            placeholder="Enter your email address"
+            autocomplete="email"
+            required
+        />
+    </div>
 
-              <!-- PASSWORD -->
+    <!-- PASSWORD -->
+    <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
 
-              <div class="mb-3">
-                <label for="password" class="form-label"> Password </label>
+        <div class="password-container">
+            <input
+                type="password"
+                class="form-control"
+                id="password"
+                name="password"
+                placeholder="Enter your password"
+                autocomplete="current-password"
+                required
+            />
 
-                <div class="password-container">
-                  <input
-                    type="password"
-                    class="form-control"
-                    id="password"
-                    name="password"
-                    placeholder="Enter your password"
-                    autocomplete="current-password"
-                    required
-                  />
+            <button
+                type="button"
+                class="password-toggle"
+                id="togglePassword"
+                aria-label="Show password"
+            >
+                <i class="fa-solid fa-eye"></i>
+            </button>
+        </div>
+    </div>
 
-                  <button
-                    type="button"
-                    class="password-toggle"
-                    id="togglePassword"
-                    aria-label="Show password"
-                  >
-                    <i class="fa-solid fa-eye"></i>
-                  </button>
-                </div>
-              </div>
+    <!-- OPTIONS -->
+    <div class="login-options">
+        <label class="remember-me">
+            <input type="checkbox" name="remember" id="remember" />
+            <span>Remember me</span>
+        </label>
 
-              <!-- OPTIONS -->
+        <a href="forgot-password.html" class="forgot-password">
+            Forgot Password?
+        </a>
+    </div>
 
-              <div class="login-options">
-                <label class="remember-me">
-                  <input type="checkbox" name="remember" id="remember" />
+    <!-- LOGIN -->
+    <button type="submit" class="login-button">Sign In</button>
 
-                  <span> Remember me </span>
-                </label>
-
-                <a href="forgot-password.html" class="forgot-password">
-                  Forgot Password?
-                </a>
-              </div>
-
-              <!-- LOGIN -->
-
-              <button type="submit" class="login-button">Sign In</button>
-            </form>
-
-            <!-- REGISTER -->
+    <!-- REGISTER -->
 
             <div class="register-link">
               Don't have an account?
@@ -355,6 +351,7 @@
               <a href="reg.html"> Create an account </a>
             </div>
 
+</form>
             <!-- BACK -->
 
             <div class="back-home">
@@ -411,22 +408,26 @@
 
     <script src="js/bootstrap.bundle.min.js"></script>
 
-    <script>
-      const togglePassword = document.getElementById("togglePassword");
+<script>
+const togglePassword = document.getElementById("togglePassword");
+const password = document.getElementById("password");
 
-      const password = document.getElementById("password");
+togglePassword.addEventListener("click", function () {
+    const isPassword = password.type === "password";
 
-      togglePassword.addEventListener("click", function () {
-        const isPassword = password.type === "password";
+    password.type = isPassword ? "text" : "password";
 
-        password.type = isPassword ? "text" : "password";
+    const icon = this.querySelector("i");
 
-        const icon = this.querySelector("i");
+    icon.classList.toggle("fa-eye", !isPassword);
+    icon.classList.toggle("fa-eye-slash", isPassword);
+});
 
-        icon.classList.toggle("fa-eye", !isPassword);
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault();
 
-        icon.classList.toggle("fa-eye-slash", isPassword);
-      });
-    </script>
+    window.location.href = "shop.html";
+});
+</script>
   </body>
 </html>

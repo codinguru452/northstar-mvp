@@ -303,7 +303,7 @@
 
             <!-- FORM -->
 
-            <form class="register-form" action="#" method="POST">
+            <form id="registerForm" class="register-form" action="#" method="POST">
               <!-- FULL NAME -->
 
               <div class="mb-3">
@@ -581,6 +581,12 @@
 
           confirmPassword.focus();
         }
+
+        document.getElementById("registerForm").addEventListener("submit", function(event) {
+          event.preventDefault();
+
+    window.location.href = "shop.html";
+            });
       });
     </script>
   </body>
